@@ -36,9 +36,17 @@ table = [
 ]
 
 def target(lvl,ac):
-    return
+    lvl=max(1, min (lvl, 20))
+    ac=max(-10, min(ac, 25))
+   
+    return table[lvl][ac]
 
+
+      
 def tests():
     assert target(5,7) == 12
     assert target(10,-10) == 20
     assert target(17,-3) == 13
+
+
+tests()
